@@ -6,11 +6,14 @@ class InsurancePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Center(
-        child: Text(
-          "This is our insurance app"
-        )
-      )
-    );
+        child: Center(
+            child: Text("This is our insurance app"
+                // need header
+
+                //search bar
+
+                // panels
+
+                )));
   }
 }
