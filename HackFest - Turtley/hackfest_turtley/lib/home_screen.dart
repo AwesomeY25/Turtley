@@ -12,16 +12,6 @@ class HomeScreen extends StatefulWidget {
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-      elevation: 0,
-      leading: IconButton(
-        icon: Icons.arrow_back_ios,
-        onPressed: () {},
-      ),
-    ));
-  }
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -43,11 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
         body: PageView(
           controller: pageController,
           children: [
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            InsurancePage(),
+            CoursesPage(),
+            AddTransactionPage(),
+            BudgetPage(),
+            ProfilePage(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -70,7 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           backgroundColor: Color.fromARGB(255, 241, 240, 245),
-          onPressed: () {},
+          onPressed: () {
+            _onItemTapped(2);
+          },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: ClipRRect(
