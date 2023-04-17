@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackfest_turtley/budget_page.dart';
 import 'package:hackfest_turtley/profile_page.dart';
 
@@ -21,66 +22,99 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _selectedIndex = index;
     });
-    pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+    pageController.animateToPage(index,
+        duration: Duration(milliseconds: 500), curve: Curves.easeIn);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null,
-      body: PageView(
-        controller: pageController,
-        children: [
-          Container(
-            color: Color.fromARGB(230,246,245,253),
-            child: InsurancePage(),),
-          Container(
-            color: Color.fromARGB(230,246,245,253),
-            child: CoursesPage(),),
-          Container(
-            color: Color.fromARGB(230,246,245,253),
-            child: AddTransactionPage()),
-          Container(
-            color: Color.fromARGB(230,246,245,253),
-            child: BudgetPage(),),
-          Container(
-            color: Color.fromARGB(230,246,245,253),
-            child: ProfilePage(),),
-        ]
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.security_outlined),
-            label: 'Insurance',
-            backgroundColor: Color.fromARGB(225, 44, 92, 138),
+        appBar: null,
+        body: PageView(
+          controller: pageController,
+          children: [
+            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            Container(color: Color.fromARGB(230, 246, 245, 253)),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Container(
+            child: Icon(Icons.add_rounded, color: Colors.black),
+            height: 70,
+            width: 70,
+            //color: Color.fromARGB(230, 246, 245, 253),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 241, 240, 245),
+              borderRadius: BorderRadius.all(Radius.circular(50)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 3,
+                  blurRadius: 3,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book_outlined),
-            label: 'Courses',
-            backgroundColor: Color.fromARGB(225, 44, 92, 138),
+          backgroundColor: Color.fromARGB(255, 241, 240, 245),
+          onPressed: () {},
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(18.0),
+            topRight: Radius.circular(18.0),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.control_point_outlined),
-            label: 'Add Transaction',
-            backgroundColor: Color.fromARGB(225, 44, 92, 138),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black38, spreadRadius: 20, blurRadius: 15),
+              ],
+            ),
+            child: BottomNavigationBar(
+              items: <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset("assets/icons/insurance-icon.svg"),
+                  label: 'Insurance',
+                  backgroundColor: Color.fromARGB(225, 44, 92, 138),
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset("assets/icons/course-icon.svg"),
+                  label: 'Courses',
+                  backgroundColor: Color.fromARGB(225, 44, 92, 138),
+                ),
+                BottomNavigationBarItem(
+                  // disable this
+                  icon: Icon(
+                    Icons.add,
+                    color: Color.fromARGB(225, 44, 92, 138),
+                  ),
+                  label: '',
+                  backgroundColor: Color.fromARGB(225, 44, 92, 138),
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset("assets/icons/budget-icon.svg"),
+                  label: 'Budget',
+                  backgroundColor: Color.fromARGB(225, 44, 92, 138),
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset("assets/icons/profile-icon.svg"),
+                  label: 'Profile',
+                  backgroundColor: Color.fromARGB(225, 44, 92, 138),
+                ),
+              ],
+              currentIndex: _selectedIndex,
+              selectedItemColor: Color.fromARGB(255, 246, 245, 253),
+              unselectedItemColor: Color.fromARGB(238, 191, 191, 197),
+              onTap: _onItemTapped,
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.wallet_outlined),
-            label: 'Budget',
-            backgroundColor: Color.fromARGB(225, 44, 92, 138),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
-            label: 'Profile',
-            backgroundColor: Color.fromARGB(225, 44, 92, 138),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 246, 245, 253),
-        unselectedItemColor: Color.fromARGB(238, 191, 191, 197),
-        onTap: _onItemTapped,
-      ),
-    );
+        ));
   }
 }
