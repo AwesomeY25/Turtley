@@ -5,6 +5,12 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Center(child: Text("This is our profile page")));
+    return Container(
+      child:Center(
+        child: Text(
+          "This is our insurance app"
+        )
+      )
+    );
   }
 }

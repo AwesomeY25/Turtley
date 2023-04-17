@@ -5,6 +5,12 @@ class BudgetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Center(child: Text("This is our budget app")));
+    return Container(
+      child:Center(
+        child: Text(
+          "This is our insurance app"
+        )
+      )
+    );
   }
 }

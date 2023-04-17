@@ -6,10 +6,11 @@ class CoursesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Center(
-            child: Text(
-      "This is our courses page.",
-      selectionColor: Colors.black,
-    )));
+      child:Center(
+        child: Text(
+          "This is our courses page."
+        )
+      )
+    );
   }
 }
