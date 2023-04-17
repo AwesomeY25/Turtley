@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hackfest_turtley/budget_page.dart';
+import 'package:hackfest_turtley/profile_page.dart';
+
+import 'add_transaction_page.dart';
+import 'courses_page.dart';
+import 'insurance_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,11 +31,21 @@ class _HomeScreenState extends State<HomeScreen> {
       body: PageView(
         controller: pageController,
         children: [
-          Container(color: Color.fromARGB(230,246,245,253)),
-          Container(color: Color.fromARGB(230,246,245,253)),
-          Container(color: Color.fromARGB(230,246,245,253)),
-          Container(color: Color.fromARGB(230,246,245,253)),
-          Container(color: Color.fromARGB(230,246,245,253)),
+          Container(
+            color: Color.fromARGB(230,246,245,253),
+            child: InsurancePage(),),
+          Container(
+            color: Color.fromARGB(230,246,245,253),
+            child: CoursesPage(),),
+          Container(
+            color: Color.fromARGB(230,246,245,253),
+            child: AddTransactionPage()),
+          Container(
+            color: Color.fromARGB(230,246,245,253),
+            child: BudgetPage(),),
+          Container(
+            color: Color.fromARGB(230,246,245,253),
+            child: ProfilePage(),),
         ]
       ),
       bottomNavigationBar: BottomNavigationBar(

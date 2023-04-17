@@ -8,7 +8,7 @@ class CoursesPage extends StatelessWidget {
     return Container(
       child:Center(
         child: Text(
-          "This is our insurance app"
+          "This is our courses page."
         )
       )
     );
