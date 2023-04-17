@@ -6,6 +6,7 @@ class InsurancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     Container(
       decoration: BoxDecoration(
         color: Colors.blue,
@@ -37,5 +38,31 @@ class InsurancePage extends StatelessWidget {
 
       // panels
     )));
+=======
+    Widget build(BuildContext context) {
+      return Scaffold(
+          appBar: AppBar(
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {},
+        ),
+      ));
+    }
+
+    Size size = MediaQuery.of(context).size;
+    return Column(children: <Widget>[
+      Container(
+          height: size.height * .2,
+          child: Stack(children: <Widget>[
+            Container(
+              height: size.height * 0.2 - 27,
+              decoration:
+                  BoxDecoration(color: Color.fromARGB(225, 44, 92, 138)),
+            )
+          ]))
+    ]);
+    // header
+>>>>>>> Stashed changes
   }
 }

@@ -12,6 +12,16 @@ class HomeScreen extends StatefulWidget {
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+      elevation: 0,
+      leading: IconButton(
+        icon: Icons.arrow_back_ios,
+        onPressed: () {},
+      ),
+    ));
+  }
 }
 
 class _HomeScreenState extends State<HomeScreen> {
