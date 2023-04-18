@@ -118,7 +118,7 @@ class SecondRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Second Route'),
       ),
-      body: Center(
+      body: Center(child: Container(
         child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
@@ -126,6 +126,6 @@ class SecondRoute extends StatelessWidget {
           child: const Text('Go back!'),
         ),
       ),
-    );
+    ));
   }
 }

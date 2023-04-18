@@ -8,8 +8,8 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         shrinkWrap: true,
-        children: <Widget>[
-          Container(
+        children: <Widget>[ SingleChildScrollView(
+          child: Container(
             height: MediaQuery.of(context).size.height * .20,
             child: Stack(children: <Widget>[
               Container(
@@ -92,5 +92,5 @@ class ProfilePage extends StatelessWidget {
           
           ]),)
                      // BoxDecoration
-                  ]), // Container
+                  )]), // Container
                 );}}
