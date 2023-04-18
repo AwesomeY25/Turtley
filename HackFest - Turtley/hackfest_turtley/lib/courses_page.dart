@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CoursesPage extends StatelessWidget {
   const CoursesPage({super.key});
@@ -6,19 +7,47 @@ class CoursesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * 0.25,
+            height: MediaQuery.of(context).size.height * .18,
             child: Stack(children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height * 0.25 - 27,
+                child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          iconSize: 50,
+                          icon: SvgPicture.asset("assets/icons/turtley.svg"),
+                          onPressed: () {},
+                        ),
+                        Text(
+                          'TURTLEY',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0, // shadow blur
+                                  color: Colors.black, // shadow color
+                                  offset: Offset(2.0,
+                                      2.0), // how much shadow will be shown
+                                ),
+                              ]),
+                        ),
+                      ],
+                    )),
+                height: MediaQuery.of(context).size.height * 0.18 - 27,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
-                      end: Alignment.center,
+                      end: Alignment.bottomCenter,
                       colors: [
-                        Color.fromARGB(224, 96, 142, 169),
+                        Color.fromARGB(218, 77, 225, 161),
                         Color.fromARGB(225, 44, 92, 138),
                       ]),
                   borderRadius: BorderRadius.only(
@@ -92,13 +121,16 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 1',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 241, 240, 245),
+                                                color: Color.fromARGB(
+                                                    255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text(
                                             'Financial Institutions',
-                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245),
-                                            fontSize: 20)),
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    200, 241, 240, 245),
+                                                fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
@@ -119,12 +151,16 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 2',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 241, 240, 245),
+                                                color: Color.fromARGB(
+                                                    255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text(
                                             'Budgeting and Saving',
-                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245), fontSize: 20)),
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    200, 241, 240, 245),
+                                                fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
@@ -145,11 +181,15 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 3',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 241, 240, 245),
+                                                color: Color.fromARGB(
+                                                    255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text('Credit and Debt',
-                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245), fontSize: 20)),
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    200, 241, 240, 245),
+                                                fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
