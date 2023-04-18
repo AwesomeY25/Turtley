@@ -48,7 +48,7 @@ class CoursesPage extends StatelessWidget {
                             ]),
                         child: Padding(
                             padding: EdgeInsets.all(16),
-                            child: Text("Insert",
+                            child: Text("Talk to a mentor",
                                 style: TextStyle(
                                     fontSize: 19, color: Colors.grey))))
                   ]),
@@ -85,7 +85,7 @@ class CoursesPage extends StatelessWidget {
                               margin: EdgeInsets.all(15),
                               child: InkWell(
                                   onTap: () {},
-                                  splashColor: Colors.white10,
+                                  splashColor: Colors.white,
                                   child: Padding(
                                       padding: EdgeInsets.all(13),
                                       child: ListTile(
@@ -110,7 +110,7 @@ class CoursesPage extends StatelessWidget {
                               margin: EdgeInsets.all(15),
                               child: InkWell(
                                   onTap: () {},
-                                  splashColor: Colors.white10,
+                                  splashColor: Colors.white,
                                   child: Padding(
                                       padding: EdgeInsets.all(13),
                                       child: ListTile(
@@ -135,7 +135,7 @@ class CoursesPage extends StatelessWidget {
                               margin: EdgeInsets.all(15),
                               child: InkWell(
                                   onTap: () {},
-                                  splashColor: Colors.white10,
+                                  splashColor: Colors.white,
                                   child: Padding(
                                       padding: EdgeInsets.all(13),
                                       child: ListTile(
