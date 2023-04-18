@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>572864098614-gdep4135ghagltvv9ul85rgqdi0gcdlu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.572864098614-gdep4135ghagltvv9ul85rgqdi0gcdlu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAKCsNXSqDIbWQAyP11tKDcVhneQSJWnBc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>572864098614</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hackfestTurtley</string>
+	<key>PROJECT_ID</key>
+	<string>hackfest---turtley</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hackfest---turtley.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:572864098614:ios:845be4f22f5f51e2a58397</string>
+	<key>DATABASE_URL</key>
+	<string>https://hackfest---turtley-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
