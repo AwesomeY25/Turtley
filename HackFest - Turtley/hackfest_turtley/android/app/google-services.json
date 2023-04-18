@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "572864098614",
+    "firebase_url": "https://hackfest---turtley-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hackfest---turtley",
+    "storage_bucket": "hackfest---turtley.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572864098614:android:9ef51b5955a58883a58397",
+        "android_client_info": {
+          "package_name": "com.example.hackfest_turtley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572864098614-9g86k5at4710pcise9lkt18dd7p29mem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhbP0YAHJhMO2mhH2L24m5OUXJz9WtIjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572864098614-9g86k5at4710pcise9lkt18dd7p29mem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
