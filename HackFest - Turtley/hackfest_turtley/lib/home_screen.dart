@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackfest_turtley/budget_page.dart';
 import 'package:hackfest_turtley/profile_page.dart';
+
 import 'add_transaction_page.dart';
 import 'courses_page.dart';
 import 'insurance_page.dart';
@@ -59,9 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           backgroundColor: Color.fromARGB(255, 241, 240, 245),
-          onPressed: () {
-            _onItemTapped(2);
-          },
+          onPressed: () {},
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: ClipRRect(
