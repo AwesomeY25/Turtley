@@ -60,7 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           backgroundColor: Color.fromARGB(255, 241, 240, 245),
-          onPressed: () {},
+          onPressed: () {
+            _onItemTapped(2);
+          },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: ClipRRect(
@@ -90,7 +92,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
                 BottomNavigationBarItem(
-                  // disable this
                   icon: Icon(
                     Icons.add,
                     color: Color.fromARGB(225, 44, 92, 138),
