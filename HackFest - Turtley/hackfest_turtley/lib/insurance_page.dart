@@ -12,6 +12,25 @@ class InsurancePage extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height * .30,
             child: Stack(children: <Widget>[
+              Padding(
+                  padding: EdgeInsets.all(30.0),
+                  child: ListTile(
+                      title: const Text(
+                    'My Goals',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 5.0, // shadow blur
+                            color: Colors.black, // shadow color
+                            offset: Offset(
+                                2.0, 2.0), // how much shadow will be shown
+                          ),
+                        ]),
+                  ))),
               Container(
                 height: MediaQuery.of(context).size.height * 0.30 - 27,
                 decoration: BoxDecoration(
@@ -145,9 +164,14 @@ class InsurancePage extends StatelessWidget {
                 Card(
                     elevation: 20,
                     child: Container(
-                      width: 170,
-                      height: 180,
-                    ),
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/family.jpg"),
+                              fit: BoxFit.cover,
+                            ))),
                     margin: EdgeInsets.all(12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
