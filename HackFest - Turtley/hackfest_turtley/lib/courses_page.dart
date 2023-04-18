@@ -47,7 +47,7 @@ class CoursesPage extends StatelessWidget {
                                 color: Colors.black.withOpacity(.5),
                               )
                             ]),
-                 child: Padding(padding: EdgeInsets.all(16), child: Text("Insert", style: TextStyle(fontSize: 19, color: Colors.grey))))]),
+                 child: Padding(padding: EdgeInsets.all(16), child: Text("Talk to a mentor", style: TextStyle(fontSize: 19, color: Colors.grey))))]),
                   Column(
                     children: [
                       ElevatedButton(
@@ -79,7 +79,7 @@ class CoursesPage extends StatelessWidget {
                           child: Card(margin: EdgeInsets.all(15),
                           child: InkWell(
                             onTap: () {},
-                              splashColor: Colors.white10,
+                              splashColor: Colors.white,
                               child: Padding(
                                 padding: EdgeInsets.all(13),
                                 child: ListTile(
@@ -98,7 +98,7 @@ class CoursesPage extends StatelessWidget {
                           child: Card(margin: EdgeInsets.all(15),
                           child: InkWell(
                             onTap: () {},
-                              splashColor: Colors.white10,
+                              splashColor: Colors.white,
                               child: Padding(
                                 padding: EdgeInsets.all(13),
                                 child: ListTile(
@@ -117,7 +117,7 @@ class CoursesPage extends StatelessWidget {
                           child: Card(margin: EdgeInsets.all(15),
                           child: InkWell(
                             onTap: () {},
-                              splashColor: Colors.white10,
+                              splashColor: Colors.white,
                               child: Padding(
                                 padding: EdgeInsets.all(13),
                                 child: ListTile(
