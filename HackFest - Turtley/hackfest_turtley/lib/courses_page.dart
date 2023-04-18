@@ -3,30 +3,29 @@ import 'package:flutter/material.dart';
 class CoursesPage extends StatelessWidget {
   const CoursesPage({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(225, 44, 92, 138),
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {},
-        ),
-      ),
       body: Column(
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * 0.10,
+            height: MediaQuery.of(context).size.height * 0.25,
             child: Stack(children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height * 0.10 - 27,
+                height: MediaQuery.of(context).size.height * 0.25 - 27,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(225, 44, 92, 138),
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.center,
+                      colors: [
+                        Color.fromARGB(224, 90, 191, 234),
+                        Color.fromARGB(225, 44, 92, 138),
+                      ]),
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(30),
                       bottomLeft: Radius.circular(30)),
-                ), ),
+                ),
+              ),
               Positioned(
                 bottom: 0,
                 left: 0,
@@ -47,7 +46,12 @@ class CoursesPage extends StatelessWidget {
                                 color: Colors.black.withOpacity(.5),
                               )
                             ]),
-                 child: Padding(padding: EdgeInsets.all(16), child: Text("Talk to a mentor", style: TextStyle(fontSize: 19, color: Colors.grey))))]),
+                        child: Padding(
+                            padding: EdgeInsets.all(16),
+                            child: Text("Talk to a mentor",
+                                style: TextStyle(
+                                    fontSize: 19, color: Colors.grey))))
+                  ]),
                   Column(
                     children: [
                       ElevatedButton(
@@ -75,57 +79,74 @@ class CoursesPage extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Column(
                       children: [
-                        Container(height: 150,
-                          child: Card(margin: EdgeInsets.all(15),
-                          child: InkWell(
-                            onTap: () {},
-                              splashColor: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(13),
-                                child: ListTile(
-                                title: const Text('Level 1', textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                                subtitle: const Text('Financial Institutions',
-                                style: TextStyle(fontSize: 20)),
-                          ))),
+                        Container(
+                          height: 150,
+                          child: Card(
+                              margin: EdgeInsets.all(15),
+                              child: InkWell(
+                                  onTap: () {},
+                                  splashColor: Colors.white,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(13),
+                                      child: ListTile(
+                                        title: const Text('Level 1',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold)),
+                                        subtitle: const Text(
+                                            'Financial Institutions',
+                                            style: TextStyle(fontSize: 20)),
+                                      ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 //set border radius more than 50% of height and width to make circle
                               )),
                         ),
-                        Container(height: 150,
-                          child: Card(margin: EdgeInsets.all(15),
-                          child: InkWell(
-                            onTap: () {},
-                              splashColor: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(13),
-                                child: ListTile(
-                                title: const Text('Level 2', textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                                subtitle: const Text('Budgeting and Saving',
-                                style: TextStyle(fontSize: 20)),
-                          ))),
+                        Container(
+                          height: 150,
+                          child: Card(
+                              margin: EdgeInsets.all(15),
+                              child: InkWell(
+                                  onTap: () {},
+                                  splashColor: Colors.white,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(13),
+                                      child: ListTile(
+                                        title: const Text('Level 2',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold)),
+                                        subtitle: const Text(
+                                            'Budgeting and Saving',
+                                            style: TextStyle(fontSize: 20)),
+                                      ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 //set border radius more than 50% of height and width to make circle
                               )),
                         ),
-                        Container(height: 150,
-                          child: Card(margin: EdgeInsets.all(15),
-                          child: InkWell(
-                            onTap: () {},
-                              splashColor: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(13),
-                                child: ListTile(
-                                title: const Text('Level 3', textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                                subtitle: const Text('Credit and Debt',
-                                style: TextStyle(fontSize: 20)),
-                          ))),
+                        Container(
+                          height: 150,
+                          child: Card(
+                              margin: EdgeInsets.all(15),
+                              child: InkWell(
+                                  onTap: () {},
+                                  splashColor: Colors.white,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(13),
+                                      child: ListTile(
+                                        title: const Text('Level 3',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold)),
+                                        subtitle: const Text('Credit and Debt',
+                                            style: TextStyle(fontSize: 20)),
+                                      ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
