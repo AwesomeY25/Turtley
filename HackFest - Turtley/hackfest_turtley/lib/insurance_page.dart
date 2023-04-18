@@ -103,17 +103,18 @@ class InsurancePage extends StatelessWidget {
                         //set border radius more than 50% of height and width to make circle
                       ),
                       child: Container(
-                          width: 220,
-                          height: 150,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.center,
-                                  colors: [
-                                    Color.fromARGB(224, 96, 142, 169),
-                                    Color.fromARGB(225, 44, 92, 138),
-                                  ]),
-                              borderRadius: BorderRadius.circular(30)))),
+                        width: 220,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.center,
+                                colors: [
+                                  Color.fromARGB(224, 96, 142, 169),
+                                  Color.fromARGB(225, 44, 92, 138),
+                                ]),
+                            borderRadius: BorderRadius.circular(30)),
+                      )),
                   Card(
                       elevation: 20,
                       margin: EdgeInsets.all(15),
@@ -171,6 +172,24 @@ class InsurancePage extends StatelessWidget {
                             image: DecorationImage(
                               image: AssetImage("assets/images/family.jpg"),
                               fit: BoxFit.cover,
+                            )),
+                        child: Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Text(
+                              'My Goals',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      blurRadius: 5.0, // shadow blur
+                                      color: Colors.black, // shadow color
+                                      offset: Offset(2.0,
+                                          2.0), // how much shadow will be shown
+                                    ),
+                                  ]),
                             ))),
                     margin: EdgeInsets.all(12),
                     shape: RoundedRectangleBorder(
