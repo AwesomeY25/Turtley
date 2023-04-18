@@ -1,8 +1,6 @@
 // ignore: unused_import
 import 'dart:io';
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:intl/intl.dart';
 
 
 class AddTransactionPage extends StatelessWidget {
@@ -50,7 +48,12 @@ class MyCustomForm extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-          child: TextField(
+          child: TextFormField( 
+            validator: (value) {
+            if (value == null || value.isEmpty) {
+            return 'Please enter some text';}
+            return null;
+            },
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "How much did you spend?",
@@ -60,7 +63,12 @@ class MyCustomForm extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-          child: TextField(
+          child: TextFormField( 
+            validator: (value) {
+            if (value == null || value.isEmpty) {
+            return 'Please enter some text';}
+            return null;
+            },
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
               labelText: "What did you spend it for?",
@@ -70,17 +78,33 @@ class MyCustomForm extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+          child: TextFormField( 
+            validator: (value) {
+            if (value == null || value.isEmpty) {
+            return 'Please enter some text';}
+            return null;
+            },
+            decoration: InputDecoration(
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
+              labelText: "When did you made the purchase?",
+              hintText: 'Enter date (MM-DD-YYYY)',
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
           child: ElevatedButton(
-            child: Text('Submit'),
-            onPressed: _submitForm,))
+  onPressed: () {
+  
+    // Validate returns true if the form is valid, or false otherwise.
+    if (_formKey.currentState!.validate()) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Processing Data')),
+      );
+    }
+  },
+child: const Text('Submit'),
+),)
             ],
           );
-        }
-
-  void _submitForm() {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState?.save();
-      // save the form values
-    }
-  }
-  }
+        }}
