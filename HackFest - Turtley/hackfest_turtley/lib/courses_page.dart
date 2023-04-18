@@ -92,11 +92,13 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 1',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
+                                                color: Color.fromARGB(255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text(
                                             'Financial Institutions',
-                                            style: TextStyle(fontSize: 20)),
+                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245),
+                                            fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
@@ -117,11 +119,12 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 2',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
+                                                color: Color.fromARGB(255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text(
                                             'Budgeting and Saving',
-                                            style: TextStyle(fontSize: 20)),
+                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245), fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(
@@ -142,10 +145,11 @@ class CoursesPage extends StatelessWidget {
                                         title: const Text('Level 3',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
+                                                color: Color.fromARGB(255, 241, 240, 245),
                                                 fontSize: 40,
                                                 fontWeight: FontWeight.bold)),
                                         subtitle: const Text('Credit and Debt',
-                                            style: TextStyle(fontSize: 20)),
+                                            style: TextStyle(color: Color.fromARGB(200, 241, 240, 245), fontSize: 20)),
                                       ))),
                               color: Color.fromARGB(225, 44, 92, 138),
                               shape: RoundedRectangleBorder(

@@ -39,7 +39,6 @@ class MyCustomForm extends StatelessWidget {
   double _expense = 0.0;
   // ignore: unused_field
   double _balance = 0.0;
-  
 
   @override
   Widget build(BuildContext context) {
@@ -91,25 +90,42 @@ class MyCustomForm extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+        Row(children: [Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
           child: ElevatedButton(
           onPressed: () {
-    // Validate returns true if the form is valid, or false otherwise.
-    if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Data')),
-      );
-    }
-  },
-child: const Text('Submit'),
-),),
-Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-          child: ElevatedButton(
-            onPressed: () {  },
-            child: const Text('Gallery'),
-),)
-            ],
-          );
-        }}
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const SecondRoute()),);
+          if (_formKey.currentState!.validate()) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Processing Data')),
+            );
+          }
+        },
+      child: const Text('Submit'),
+      ),),
+      ])
+                  ],
+                );
+              }}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
