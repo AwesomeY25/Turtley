@@ -75,6 +75,7 @@ class InsurancePage extends StatelessWidget {
               child: Row(
                 children: [
                   Card(
+                      elevation: 20,
                       margin: EdgeInsets.all(12),
                       color: Color.fromARGB(225, 44, 92, 138),
                       shape: RoundedRectangleBorder(
@@ -82,11 +83,20 @@ class InsurancePage extends StatelessWidget {
 
                         //set border radius more than 50% of height and width to make circle
                       ),
-                      child: SizedBox(
-                        width: 200,
-                        height: 100,
-                      )),
+                      child: Container(
+                          width: 220,
+                          height: 150,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.center,
+                                  colors: [
+                                    Color.fromARGB(224, 96, 142, 169),
+                                    Color.fromARGB(225, 44, 92, 138),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)))),
                   Card(
+                      elevation: 20,
                       margin: EdgeInsets.all(15),
                       color: Color.fromARGB(225, 44, 92, 138),
                       shape: RoundedRectangleBorder(
@@ -94,11 +104,20 @@ class InsurancePage extends StatelessWidget {
 
                         //set border radius more than 50% of height and width to make circle
                       ),
-                      child: SizedBox(
-                        width: 200,
-                        height: 100,
-                      )),
+                      child: Container(
+                          width: 220,
+                          height: 150,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.center,
+                                  colors: [
+                                    Color.fromARGB(224, 96, 142, 169),
+                                    Color.fromARGB(225, 44, 92, 138),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)))),
                   Card(
+                      elevation: 20,
                       margin: EdgeInsets.all(15),
                       color: Color.fromARGB(225, 44, 92, 138),
                       shape: RoundedRectangleBorder(
@@ -106,68 +125,111 @@ class InsurancePage extends StatelessWidget {
 
                         //set border radius more than 50% of height and width to make circle
                       ),
-                      child: SizedBox(
-                        width: 200,
-                        height: 100,
-                      ))
+                      child: Container(
+                          width: 220,
+                          height: 150,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.center,
+                                  colors: [
+                                    Color.fromARGB(224, 96, 142, 169),
+                                    Color.fromARGB(225, 44, 92, 138),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)))),
                 ],
               )),
-          Column(
-            children: [
-              Card(
-                  child: SizedBox(
-                    width: 170,
-                    height: 180,
-                  ),
-                  margin: EdgeInsets.all(12),
-                  color: Color.fromARGB(225, 44, 92, 138),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+          Column(children: [
+            Row(
+              children: [
+                Card(
+                    elevation: 20,
+                    child: Container(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
 
-                    //set border radius more than 50% of height and width to make circle
-                  )),
-              Card(
-                  child: SizedBox(
-                    width: 170,
-                    height: 180,
-                  ),
-                  margin: EdgeInsets.all(12),
-                  color: Color.fromARGB(225, 44, 92, 138),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+                Card(
+                    elevation: 20,
+                    child: SizedBox(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
 
-                    //set border radius more than 50% of height and width to make circle
-                  )),
-              Card(
-                  child: SizedBox(
-                    width: 170,
-                    height: 180,
-                  ),
-                  margin: EdgeInsets.all(12),
-                  color: Color.fromARGB(225, 44, 92, 138),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+              ],
+            ),
+            Row(
+              children: [
+                Card(
+                    elevation: 20,
+                    child: SizedBox(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
 
-                    //set border radius more than 50% of height and width to make circle
-                  ))
-            ],
-          ),
-          Stack(
-            children: [
-              Card(
-                  child: SizedBox(
-                    width: 170,
-                    height: 180,
-                  ),
-                  margin: EdgeInsets.all(12),
-                  color: Color.fromARGB(225, 44, 92, 138),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+                Card(
+                    elevation: 20,
+                    child: SizedBox(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
 
-                    //set border radius more than 50% of height and width to make circle
-                  ))
-            ],
-          )
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+              ],
+            ),
+            Row(
+              children: [
+                Card(
+                    elevation: 20,
+                    child: SizedBox(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+                Card(
+                    elevation: 20,
+                    child: SizedBox(
+                      width: 170,
+                      height: 180,
+                    ),
+                    margin: EdgeInsets.all(12),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+
+                      //set border radius more than 50% of height and width to make circle
+                    )),
+              ],
+            ),
+          ]),
         ],
       ),
     );
