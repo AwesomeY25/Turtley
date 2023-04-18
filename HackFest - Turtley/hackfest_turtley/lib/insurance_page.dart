@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class InsurancePage extends StatelessWidget {
   const InsurancePage({super.key});
@@ -10,17 +11,23 @@ class InsurancePage extends StatelessWidget {
         shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * .25,
+            height: MediaQuery.of(context).size.height * .15,
             child: Stack(children: <Widget>[
               Container(
-                child: Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: ListTile(
-                        title: const Text(
-                          'Welcome to Turtley!',
-                          textAlign: TextAlign.start,
+                child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          iconSize: 50,
+                          icon: SvgPicture.asset("assets/icons/turtley.svg"),
+                          onPressed: () {},
+                        ),
+                        Text(
+                          'TURTLEY',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               shadows: [
@@ -32,29 +39,15 @@ class InsurancePage extends StatelessWidget {
                                 ),
                               ]),
                         ),
-                        subtitle: const Text(
-                          'Insurance products, made for you.',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              shadows: [
-                                Shadow(
-                                  blurRadius: 1.0, // shadow blur
-                                  color: Colors.black, // shadow color
-                                  offset: Offset(1.0,
-                                      1.0), // how much shadow will be shown
-                                ),
-                              ]),
-                        ))),
-                height: MediaQuery.of(context).size.height * 0.25 - 27,
+                      ],
+                    )),
+                height: MediaQuery.of(context).size.height * 0.15 - 27,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
-                      end: Alignment.center,
+                      end: Alignment.bottomCenter,
                       colors: [
-                        Color.fromARGB(224, 96, 142, 169),
+                        Color.fromARGB(218, 77, 225, 161),
                         Color.fromARGB(225, 44, 92, 138),
                       ]),
                   borderRadius: BorderRadius.only(
@@ -62,6 +55,7 @@ class InsurancePage extends StatelessWidget {
                       bottomLeft: Radius.circular(30)),
                 ),
               ),
+
               Positioned(
                 bottom: 0,
                 left: 0,
@@ -111,28 +105,6 @@ class InsurancePage extends StatelessWidget {
                 children: [
                   Card(
                       elevation: 20,
-                      margin: EdgeInsets.all(12),
-                      color: Color.fromARGB(225, 44, 92, 138),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-
-                        //set border radius more than 50% of height and width to make circle
-                      ),
-                      child: Container(
-                        width: 220,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.center,
-                                colors: [
-                                  Color.fromARGB(224, 96, 142, 169),
-                                  Color.fromARGB(225, 44, 92, 138),
-                                ]),
-                            borderRadius: BorderRadius.circular(30)),
-                      )),
-                  Card(
-                      elevation: 20,
                       margin: EdgeInsets.all(15),
                       color: Color.fromARGB(225, 44, 92, 138),
                       shape: RoundedRectangleBorder(
@@ -142,28 +114,7 @@ class InsurancePage extends StatelessWidget {
                       ),
                       child: Container(
                           width: 220,
-                          height: 150,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.center,
-                                  colors: [
-                                    Color.fromARGB(224, 96, 142, 169),
-                                    Color.fromARGB(225, 44, 92, 138),
-                                  ]),
-                              borderRadius: BorderRadius.circular(30)))),
-                  Card(
-                      elevation: 20,
-                      margin: EdgeInsets.all(15),
-                      color: Color.fromARGB(225, 44, 92, 138),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-
-                        //set border radius more than 50% of height and width to make circle
-                      ),
-                      child: Container(
-                          width: 220,
-                          height: 150,
+                          height: 125,
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
                                   begin: Alignment.topCenter,
@@ -178,10 +129,92 @@ class InsurancePage extends StatelessWidget {
                               child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
-                                    'Your Insuranc Plans',
+                                    'Your Budget Plans',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            blurRadius: 5.0, // shadow blur
+                                            color: Colors.black, // shadow color
+                                            offset: Offset(2.0,
+                                                2.0), // how much shadow will be shown
+                                          ),
+                                        ]),
+                                  ))))),
+                  Card(
+                      elevation: 20,
+                      margin: EdgeInsets.all(15),
+                      color: Color.fromARGB(225, 44, 92, 138),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+
+                        //set border radius more than 50% of height and width to make circle
+                      ),
+                      child: Container(
+                          width: 220,
+                          height: 125,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.center,
+                                  colors: [
+                                    Color.fromARGB(224, 96, 142, 169),
+                                    Color.fromARGB(225, 44, 92, 138),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Your Courses',
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            blurRadius: 5.0, // shadow blur
+                                            color: Colors.black, // shadow color
+                                            offset: Offset(2.0,
+                                                2.0), // how much shadow will be shown
+                                          ),
+                                        ]),
+                                  ))))),
+                  Card(
+                      elevation: 20,
+                      margin: EdgeInsets.all(15),
+                      color: Color.fromARGB(225, 44, 92, 138),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+
+                        //set border radius more than 50% of height and width to make circle
+                      ),
+                      child: Container(
+                          width: 220,
+                          height: 125,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.center,
+                                  colors: [
+                                    Color.fromARGB(224, 96, 142, 169),
+                                    Color.fromARGB(225, 44, 92, 138),
+                                  ]),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Your Insurance Plans',
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                        fontSize: 25,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [

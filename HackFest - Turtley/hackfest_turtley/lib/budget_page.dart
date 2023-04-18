@@ -21,11 +21,11 @@ class BudgetPage extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.center,
                     stops: [
-                      0.40,
+                      -10,
                       2,
                     ],
                     colors: [
-                      Color.fromARGB(224, 96, 142, 169),
+                      Color.fromARGB(218, 77, 225, 161),
                       Color.fromARGB(225, 44, 92, 138),
                     ]),
                 borderRadius: BorderRadius.only(

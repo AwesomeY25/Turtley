@@ -32,13 +32,20 @@ class _StepOneState extends State<StepOne> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         body: Column(children: <Widget>[
-          IconButton(
-            alignment: Alignment.topLeft,
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+          Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                  padding: EdgeInsets.only(
+                    top: 30,
+                    left: 25,
+                  ),
+                  child: IconButton(
+                    alignment: Alignment.topLeft,
+                    icon: Icon(Icons.arrow_back),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ))),
           Expanded(
               child: ListView.builder(
                   padding: const EdgeInsets.all(8),
