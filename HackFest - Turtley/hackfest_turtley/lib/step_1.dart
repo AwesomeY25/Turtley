@@ -11,8 +11,8 @@ class StepOne extends StatefulWidget {
 }
 
 class _StepOneState extends State<StepOne> {
-  final List<String> incomeStream = <String>['yes'];
-  final List<num> numIncome = <num>[3000];
+  final List<String> incomeStream = <String>['Salary'];
+  final List<num> numIncome = <num>[15000];
   TextEditingController nameController = TextEditingController();
   TextEditingController incomeController = TextEditingController();
   TextEditingController savingsController = TextEditingController();
@@ -47,20 +47,22 @@ class _StepOneState extends State<StepOne> {
                     },
                   ))),
           Expanded(
-              child: ListView.builder(
-                  padding: const EdgeInsets.all(8),
-                  itemCount: incomeStream.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      height: 20,
-                      margin: EdgeInsets.all(2),
-                      child: Container(
-                          child: Text(
-                        '${incomeStream[index]} - P${numIncome[index]}',
-                        style: TextStyle(fontSize: 18),
-                      )),
-                    );
-                  })),
+              child: Card(
+                  elevation: 20,
+                  child: ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: incomeStream.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          height: 20,
+                          margin: EdgeInsets.all(2),
+                          child: Container(
+                              child: Text(
+                            '${incomeStream[index]} - P${numIncome[index]}',
+                            style: TextStyle(fontSize: 18),
+                          )),
+                        );
+                      }))),
           Container(
               child: Padding(
             padding: EdgeInsets.all(20),
