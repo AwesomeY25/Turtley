@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackfest_turtley/budget_page.dart';
 import 'package:hackfest_turtley/profile_page.dart';
-
 import 'add_transaction_page.dart';
 import 'courses_page.dart';
 import 'insurance_page.dart';
