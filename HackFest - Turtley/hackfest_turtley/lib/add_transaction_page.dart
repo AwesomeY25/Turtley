@@ -90,23 +90,50 @@ class MyCustomForm extends StatelessWidget {
             ),
           ),
         ),
-        Row(children: [Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-          child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const SecondRoute()),);
-          if (_formKey.currentState!.validate()) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Processing Data')),
-            );
-          }
+        Row( children: [
+      ElevatedButton(
+         onPressed: () {
         },
-      child: const Text('Submit'),
-      ),),
-      ])
-                  ],
-                );
+        // padding: const EdgeInsets.all(0.0),
+         style: ElevatedButton.styleFrom(
+    shape: StadiumBorder(), 
+  ), child: Container(
+          padding: const EdgeInsets.only(top: 20.0, bottom: 20,),
+          child:SizedBox(
+            height: 20.0,
+            width: 100.0,
+            child: Container(
+                margin: const EdgeInsets.only( left: 25.0 ),
+                child: Text(
+                  "Back",
+                  style: TextStyle( fontSize: 15.0),
+                )
+            ),
+          ),
+    )),
+    ElevatedButton(
+         onPressed: () {
+    showAlertDialog(context);
+        },
+        // padding: const EdgeInsets.all(0.0),
+         style: ElevatedButton.styleFrom(
+    shape: StadiumBorder(), 
+  ), child: Container(
+          padding: const EdgeInsets.only(top: 20.0, bottom: 20,),
+          child:SizedBox(
+            height: 20.0,
+            width: 100.0,
+            child: Container(
+                margin: const EdgeInsets.only(left: 20 ),
+                child: Text(
+                  "Submit",
+                  style: TextStyle( fontSize: 15.0),
+                )
+            ),
+          ),
+    ))])
+      ]
+      );
               }}
 
 class SecondRoute extends StatelessWidget {
@@ -119,13 +146,51 @@ class SecondRoute extends StatelessWidget {
         title: const Text('Second Route'),
       ),
       body: Center(child: Container(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
+        child: ElevatedButton(child: Text("Show Pop-up"),
+  onPressed: () {
+    showAlertDialog(context);
+  },
+),
       ),
     ));
   }
+}
+
+// Define a function that shows the dialog
+void showAlertDialog(BuildContext context) {
+  // Create the AlertDialog
+  AlertDialog dialog = AlertDialog(
+      title: Text('Congratulations!', textAlign: TextAlign.center, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+      content: Container(
+        height: 400,
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/Turtley.png',
+              height: 350,
+            ),
+            Text('Keep up building good financial habits! Look who just hatched today!'),
+          ],
+        ),
+      ),
+      actions: <Widget>[
+        ElevatedButton(
+          child: Text('Close'),
+          style: ElevatedButton.styleFrom(
+    shape: StadiumBorder(),
+  ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+
+  // Show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return dialog;
+    },
+  );
 }
