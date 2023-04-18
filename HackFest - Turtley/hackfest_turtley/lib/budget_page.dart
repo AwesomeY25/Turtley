@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:d_chart/d_chart.dart';
+import 'package:hackfest_turtley/step_1.dart';
 
 class BudgetPage extends StatelessWidget {
   const BudgetPage({super.key});
@@ -84,9 +85,12 @@ class BudgetPage extends StatelessWidget {
                       focusColor: Colors.black,
                       trailing: IconButton(
                         icon: Icon(Icons.add),
-                        onPressed: (
-                            // open register page
-                            ) {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StepOne()));
+                        },
                       ),
                     ))),
             color: Colors.white,
