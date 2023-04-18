@@ -10,29 +10,45 @@ class InsurancePage extends StatelessWidget {
         shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * .30,
+            height: MediaQuery.of(context).size.height * .25,
             child: Stack(children: <Widget>[
-              Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: ListTile(
-                      title: const Text(
-                    'My Goals',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 5.0, // shadow blur
-                            color: Colors.black, // shadow color
-                            offset: Offset(
-                                2.0, 2.0), // how much shadow will be shown
-                          ),
-                        ]),
-                  ))),
               Container(
-                height: MediaQuery.of(context).size.height * 0.30 - 27,
+                child: Padding(
+                    padding: EdgeInsets.all(30.0),
+                    child: ListTile(
+                        title: const Text(
+                          'Welcome to Turtley!',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 5.0, // shadow blur
+                                  color: Colors.black, // shadow color
+                                  offset: Offset(2.0,
+                                      2.0), // how much shadow will be shown
+                                ),
+                              ]),
+                        ),
+                        subtitle: const Text(
+                          'Insurance products, made for you.',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 1.0, // shadow blur
+                                  color: Colors.black, // shadow color
+                                  offset: Offset(1.0,
+                                      1.0), // how much shadow will be shown
+                                ),
+                              ]),
+                        ))),
+                height: MediaQuery.of(context).size.height * 0.25 - 27,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
@@ -156,7 +172,27 @@ class InsurancePage extends StatelessWidget {
                                     Color.fromARGB(224, 96, 142, 169),
                                     Color.fromARGB(225, 44, 92, 138),
                                   ]),
-                              borderRadius: BorderRadius.circular(30)))),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Your Insuranc Plans',
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                            blurRadius: 5.0, // shadow blur
+                                            color: Colors.black, // shadow color
+                                            offset: Offset(2.0,
+                                                2.0), // how much shadow will be shown
+                                          ),
+                                        ]),
+                                  ))))),
                 ],
               )),
           Column(children: [
@@ -173,24 +209,26 @@ class InsurancePage extends StatelessWidget {
                               image: AssetImage("assets/images/family.jpg"),
                               fit: BoxFit.cover,
                             )),
-                        child: Align(
-                            alignment: Alignment.bottomLeft,
-                            child: Text(
-                              'My Goals',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 5.0, // shadow blur
-                                      color: Colors.black, // shadow color
-                                      offset: Offset(2.0,
-                                          2.0), // how much shadow will be shown
-                                    ),
-                                  ]),
-                            ))),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Family Insurance',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -199,12 +237,36 @@ class InsurancePage extends StatelessWidget {
                     )),
                 Card(
                     elevation: 20,
-                    child: SizedBox(
-                      width: 170,
-                      height: 180,
-                    ),
+                    child: Container(
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/life.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Life Insurance',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
-                    color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
 
@@ -216,12 +278,36 @@ class InsurancePage extends StatelessWidget {
               children: [
                 Card(
                     elevation: 20,
-                    child: SizedBox(
-                      width: 170,
-                      height: 180,
-                    ),
+                    child: Container(
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/couple.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Investments Insurance',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
-                    color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
 
@@ -229,12 +315,36 @@ class InsurancePage extends StatelessWidget {
                     )),
                 Card(
                     elevation: 20,
-                    child: SizedBox(
-                      width: 170,
-                      height: 180,
-                    ),
+                    child: Container(
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/car.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Car Insurance',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
-                    color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
 
@@ -246,12 +356,36 @@ class InsurancePage extends StatelessWidget {
               children: [
                 Card(
                     elevation: 20,
-                    child: SizedBox(
-                      width: 170,
-                      height: 180,
-                    ),
+                    child: Container(
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/education.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Education Insurance',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
-                    color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
 
@@ -259,12 +393,36 @@ class InsurancePage extends StatelessWidget {
                     )),
                 Card(
                     elevation: 20,
-                    child: SizedBox(
-                      width: 170,
-                      height: 180,
-                    ),
+                    child: Container(
+                        width: 170,
+                        height: 180,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/more.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                        child: Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'More Products',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      shadows: [
+                                        Shadow(
+                                          blurRadius: 5.0, // shadow blur
+                                          color: Colors.black, // shadow color
+                                          offset: Offset(2.0,
+                                              2.0), // how much shadow will be shown
+                                        ),
+                                      ]),
+                                )))),
                     margin: EdgeInsets.all(12),
-                    color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
 
