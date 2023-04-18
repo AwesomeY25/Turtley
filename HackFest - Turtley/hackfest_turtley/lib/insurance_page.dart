@@ -19,7 +19,7 @@ class InsurancePage extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.center,
                       colors: [
-                        Color.fromARGB(224, 96, 142, 169),
+                        Color.fromARGB(224, 90, 191, 234),
                         Color.fromARGB(225, 44, 92, 138),
                       ]),
                   borderRadius: BorderRadius.only(

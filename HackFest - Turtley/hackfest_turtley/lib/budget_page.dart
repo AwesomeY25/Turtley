@@ -95,7 +95,7 @@ class BudgetPage extends StatelessWidget {
                       ))
                     ]))),
             Container(
-              height: MediaQuery.of(context).size.height * 0.30 - 27,
+              height: 150,
               child: Card(
                   margin: EdgeInsets.all(15),
                   child: InkWell(
@@ -109,12 +109,6 @@ class BudgetPage extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold)),
                             focusColor: Colors.black,
-                            trailing: IconButton(
-                              icon: Icon(Icons.add),
-                              onPressed: (
-                                  // open register page
-                                  ) {},
-                            ),
                           ))),
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -132,7 +126,7 @@ class BudgetPage extends StatelessWidget {
                       child: Padding(
                           padding: EdgeInsets.all(13),
                           child: ListTile(
-                            title: const Text('Your Expenses',
+                            title: const Text('Your Income',
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold)),
