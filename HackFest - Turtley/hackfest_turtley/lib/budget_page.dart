@@ -33,7 +33,7 @@ class BudgetPage extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold)),
                             focusColor: Colors.black,
-                          ))),
+                          ))]),
             ),
             Container(
               height: 150,
@@ -81,7 +81,6 @@ class BudgetPage extends StatelessWidget {
             ),
           ]))
         ]))
-      ],
-    )));
+    );
   }
 }

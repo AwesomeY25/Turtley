@@ -94,8 +94,7 @@ class MyCustomForm extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
           child: ElevatedButton(
-  onPressed: () {
-  
+          onPressed: () {
     // Validate returns true if the form is valid, or false otherwise.
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -104,6 +103,12 @@ class MyCustomForm extends StatelessWidget {
     }
   },
 child: const Text('Submit'),
+),),
+Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+          child: ElevatedButton(
+            onPressed: () {  },
+            child: const Text('Gallery'),
 ),)
             ],
           );
