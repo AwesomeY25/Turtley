@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackfest_turtley/budget_page.dart';
 import 'package:hackfest_turtley/profile_page.dart';
-
 import 'add_transaction_page.dart';
 import 'courses_page.dart';
 import 'insurance_page.dart';
@@ -33,11 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
         body: PageView(
           controller: pageController,
           children: [
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
-            Container(color: Color.fromARGB(230, 246, 245, 253)),
+            InsurancePage(),
+            CoursesPage(),
+            AddTransactionPage(),
+            BudgetPage(),
+            ProfilePage(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -60,7 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           backgroundColor: Color.fromARGB(255, 241, 240, 245),
-          onPressed: () {},
+          onPressed: () {
+            _onItemTapped(2);
+          },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: ClipRRect(
@@ -90,7 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
                 BottomNavigationBarItem(
-                  // disable this
                   icon: Icon(
                     Icons.add,
                     color: Color.fromARGB(225, 44, 92, 138),
