@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:d_chart/d_chart.dart';
+import 'package:hackfest_turtley/add_transaction_page.dart';
 import 'package:hackfest_turtley/step_1.dart';
 
 class BudgetPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class BudgetPage extends StatelessWidget {
             child: Wrap(children: [
       FractionallySizedBox(
           child: Container(
-              height: MediaQuery.of(context).size.height * 0.70 - 27,
+              height: MediaQuery.of(context).size.height * 0.55 - 27,
               width: MediaQuery.of(context).size.width,
               // insert chart
               decoration: BoxDecoration(
@@ -109,11 +110,20 @@ class BudgetPage extends StatelessWidget {
                 child: Padding(
                     padding: EdgeInsets.all(13),
                     child: ListTile(
-                      title: const Text('Your Income',
+                      title: const Text('Your Expenses',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold)),
                       focusColor: Colors.black,
+                      trailing: IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AddTransactionPage()));
+                        },
+                      ),
                     ))),
             color: Colors.white,
             shape: RoundedRectangleBorder(
