@@ -7,10 +7,10 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       body: ListView(shrinkWrap: true, children: <Widget>[
         Container(
-          height: MediaQuery.of(context).size.height * .15,
+          height: MediaQuery.of(context).size.height * .30,
           child: Stack(children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height * 0.15 - 17,
+              height: MediaQuery.of(context).size.height * 0.25 - 15,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -25,16 +25,17 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 0,
+              bottom: 100,
               left: 0,
               right: 0,
               child: Container(
                 width: 100.0,
-                height: 100.0,
+                height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: NetworkImage('https://example.com/my-image.png'),
+                    image: NetworkImage(
+                        'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -48,11 +49,10 @@ class ProfilePage extends StatelessWidget {
                 Column(children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                      top: 180,
                       left: 100,
-                      bottom: 50,
                     ),
                     child: Container(
+                      height: MediaQuery.of(context).size.height * 0.15,
                       alignment: Alignment.center,
                       child: Column(
                         children: [
@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color: Colors.black,
                               )),
                         ],
                       ),
