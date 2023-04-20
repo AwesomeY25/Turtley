@@ -32,6 +32,7 @@ class AddTransactionPage extends StatelessWidget {
 // ignore: must_be_immutable
 class MyCustomForm extends StatelessWidget {
   MyCustomForm({super.key});
+  // ignore: unused_field
   final _formKey = GlobalKey<FormState>();
   // ignore: unused_field
   double _income = 0.0;
