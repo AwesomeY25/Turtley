@@ -101,8 +101,8 @@ class MyCustomForm extends StatelessWidget {
   ), child: Container(
           padding: const EdgeInsets.only(top: 20.0, bottom: 20,),
           child:SizedBox(
-            height: 20.0,
-            width: 100.0,
+            height: 15.0,
+            width: 80.0,
             child: Container(
                 margin: const EdgeInsets.only( left: 25.0 ),
                 child: Text(
@@ -122,10 +122,10 @@ class MyCustomForm extends StatelessWidget {
   ), child: Container(
           padding: const EdgeInsets.only(top: 20.0, bottom: 20,),
           child:SizedBox(
-            height: 20.0,
-            width: 100.0,
+            height: 15.0,
+            width: 80.0,
             child: Container(
-                margin: const EdgeInsets.only(left: 20 ),
+                margin: const EdgeInsets.only(left: 20),
                 child: Text(
                   "Submit",
                   style: TextStyle( fontSize: 15.0),
