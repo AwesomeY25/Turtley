@@ -10,12 +10,14 @@ class InsurancePage extends StatelessWidget {
         MediaQuery.of(context).size.height * .30; //product height
     final insuranceWidth =
         MediaQuery.of(context).size.width * .449; //product width
+    final fontProduct = double.parse('18');
     return Scaffold(
       body: ListView(
+        physics: BouncingScrollPhysics(),
         shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height * .15,
+            height: MediaQuery.of(context).size.height * .20,
             child: Stack(children: <Widget>[
               Container(
                 child: Align(
@@ -45,7 +47,7 @@ class InsurancePage extends StatelessWidget {
                         ),
                       ],
                     )),
-                height: MediaQuery.of(context).size.height * 0.15 - 27,
+                height: MediaQuery.of(context).size.height * 0.20 - 27,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
@@ -67,7 +69,7 @@ class InsurancePage extends StatelessWidget {
                   child: Row(children: [
                     Column(children: [
                       Container(
-                          height: 70,
+                          height: 50,
                           width: MediaQuery.of(context).size.width * 0.70,
                           margin: EdgeInsets.only(left: 20, right: 5),
                           decoration: BoxDecoration(
@@ -233,7 +235,8 @@ class InsurancePage extends StatelessWidget {
                                 image: AssetImage("assets/images/family.jpg"),
                                 fit: BoxFit.cover,
                               )),
-                          child: Padding(
+                          child: Column(children: 
+                          [Padding(
                               padding: EdgeInsets.all(15),
                               child: Align(
                                   alignment: Alignment.bottomLeft,
@@ -241,7 +244,7 @@ class InsurancePage extends StatelessWidget {
                                     'Family Insurance',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
@@ -252,13 +255,13 @@ class InsurancePage extends StatelessWidget {
                                                 2.0), // how much shadow will be shown
                                           ),
                                         ]),
-                                  )))),
-                      margin: EdgeInsets.all(margins),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                                  )))]),
+                      
 
                         //set border radius more than 50% of height and width to make circle
-                      )),
+                ),     margin: EdgeInsets.all(margins),
+                      shape: RoundedRectangleBorder(),
+                      )]),
                   Card(
                       elevation: 20,
                       child: Container(
@@ -278,7 +281,7 @@ class InsurancePage extends StatelessWidget {
                                     'Life Insurance',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
@@ -319,7 +322,7 @@ class InsurancePage extends StatelessWidget {
                                     'Investments Insurance',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
@@ -356,7 +359,7 @@ class InsurancePage extends StatelessWidget {
                                     'Car Insurance',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
@@ -398,7 +401,7 @@ class InsurancePage extends StatelessWidget {
                                     'Education Insurance',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
@@ -435,7 +438,7 @@ class InsurancePage extends StatelessWidget {
                                     'More Products',
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: fontProduct,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         shadows: [
