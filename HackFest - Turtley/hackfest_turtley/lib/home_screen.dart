@@ -81,12 +81,12 @@ class _HomeScreenState extends State<HomeScreen> {
             child: BottomNavigationBar(
               items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/icons/insurance-icon.svg"),
+                  icon: SvgPicture.asset("assets/icons/shield (2).svg"),
                   label: 'Insurance',
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/icons/course-icon.svg"),
+                  icon: SvgPicture.asset("assets/icons/coursesbook.svg"),
                   label: 'Courses',
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
@@ -99,12 +99,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/icons/budget-icon.svg"),
+                  icon: SvgPicture.asset("assets/icons/banknote (2).svg"),
                   label: 'Budget',
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/icons/profile-icon.svg"),
+                  icon: SvgPicture.asset("assets/icons/profileuser.svg"),
                   label: 'Profile',
                   backgroundColor: Color.fromARGB(225, 44, 92, 138),
                 ),
