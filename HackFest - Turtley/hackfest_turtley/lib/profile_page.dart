@@ -10,7 +10,7 @@ class ProfilePage extends StatelessWidget {
           height: MediaQuery.of(context).size.height * .30,
           child: Stack(children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height * 0.25 - 15,
+              height: MediaQuery.of(context).size.height * 0.20 - 75,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -25,11 +25,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 100,
+              bottom: 120,
               left: 0,
               right: 0,
-              child: Container(
-                width: 100.0,
+              child: Center(child: Container(
+                width: 170.0,
                 height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
@@ -39,37 +39,26 @@ class ProfilePage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-              ),
+              ),),
             ),
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
-              child: Row(children: [
-                Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 100,
-                    ),
-                    child: Container(
-                      height: MediaQuery.of(context).size.height * 0.15,
+              child: Center(child: Container(
+                      height: MediaQuery.of(context).size.height * 0.13,
                       alignment: Alignment.center,
-                      child: Column(
-                        children: [
-                          const Text('Jackson Wang',
+                      child:
+                          const Text('Darren Espanto',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 50,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
                               )),
-                        ],
                       ),
                     ),
-                  ),
-                ]),
-              ]),
-            ) // BoxDecoration
+            ), // BoxDecoration
           ]), // Container
         ), // Positioned
 
@@ -85,8 +74,7 @@ class ProfilePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Container(
-                        width: 350,
-                        height: 90,
+                        height: 120,
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                                 begin: Alignment.topCenter,
@@ -99,17 +87,17 @@ class ProfilePage extends StatelessWidget {
                         child: ListTile(
                           leading: Image.asset(
                             'assets/images/Egg.png',
-                            height: 700,
+                            height: 800,
                           ),
                           title: Text(
-                            "3 days to hatch!",
+                            "Buy your first insurance to hatch!",
                             style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
                           subtitle: Text(
-                            "Use the application for 3 days to get your turtle!",
+                            "Buy an insurance to get your turtle!",
                             style: TextStyle(color: Colors.grey),
                           ),
                         ))),
@@ -121,8 +109,7 @@ class ProfilePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Container(
-                        width: 350,
-                        height: 90,
+                        height: 120,
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                                 begin: Alignment.topCenter,
@@ -135,23 +122,22 @@ class ProfilePage extends StatelessWidget {
                         child: ListTile(
                           leading: Image.asset(
                             'assets/images/Egg.png',
-                            height: 700,
+                            height: 800,
                           ),
                           title: Text(
-                            "3 days to hatch!",
+                            "Just 3 more days to hatch!",
                             style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
                           subtitle: Text(
-                            "Use the application for 3 days to get your turtle!",
+                            "Use the app for 3 days to get your turtle!",
                             style: TextStyle(color: Colors.grey),
                           ),
                         ))),
               ],
             )),
-        Column(children: [
           Container(
             alignment: Alignment.center,
             child: Column(
@@ -211,7 +197,6 @@ class ProfilePage extends StatelessWidget {
               )
             ],
           ),
-        ]),
       ]),
     );
   }
