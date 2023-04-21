@@ -6,7 +6,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(shrinkWrap: true, children: <Widget>[
-        Container(
+        Expanded(child: Container(
           height: MediaQuery.of(context).size.height * .30,
           child: Stack(children: <Widget>[
             Container(
@@ -60,7 +60,7 @@ class ProfilePage extends StatelessWidget {
                     ),
             ), // BoxDecoration
           ]), // Container
-        ), // Positioned
+        ),), // Positioned
 
         SingleChildScrollView(
             scrollDirection: Axis.horizontal,
